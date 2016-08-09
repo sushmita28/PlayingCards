@@ -34,7 +34,35 @@ public class card {
 		return c.getCardValue()==this.cardValue;
 	}
 	
+	public boolean isNextCardByValue(card c){
+		int thisIndex=0;
+		int thatIndex=0;
+		for(int i=0;i<card.VALUES.length;i++){
+			if(card.VALUES[i]==c.getCardValue()){
+				thatIndex=i;
+			}
+			if(card.VALUES[i]==this.cardValue){
+				thisIndex=i;
+			}
+			
+		}
+		return thisIndex==thatIndex+1;
+	}
 	
+	public boolean isPrevCardByValue(card c){
+		int thisIndex=0;
+		int thatIndex=0;
+		for(int i=0;i<card.VALUES.length;i++){
+			if(card.VALUES[i]==c.getCardValue()){
+				thatIndex=i;
+			}
+			if(card.VALUES[i]==this.cardValue){
+				thisIndex=i;
+			}
+			
+		}
+		return thisIndex==thatIndex-1;
+	}
 	
 	
 
